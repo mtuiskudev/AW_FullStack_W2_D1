@@ -18,7 +18,7 @@ namespace AW_FullStack_W2_D1
             Car ferrari = new Car("Ferrari", "GTO", 1992);
             cList.Add(ferrari);
 
-            Console.WriteLine(cList[1].Make);
+            //Console.WriteLine(cList[1].Make);
 
 
             foreach (Car c in cList)
@@ -38,14 +38,14 @@ namespace AW_FullStack_W2_D1
 
             Console.WriteLine(Environment.NewLine);
 
-            /*Car haettu = cList.Find(c => c.Make == "Nissan");
+            Car haettu = cList.Find(c => c.Make == "Nissan");
 
             haettu.Model = "Silvia";
 
             foreach (Car c in cList)
             {
                 Console.WriteLine(c.Make + " " + c.Model + " " + c.Year);
-            }*/
+            }
         }
     }
 

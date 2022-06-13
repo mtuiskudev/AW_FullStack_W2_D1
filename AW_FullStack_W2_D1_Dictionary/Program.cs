@@ -7,16 +7,22 @@ namespace AW_FullStack_W2_D1_Dictionary
     {
         static void Main(string[] args)
         {
-
+            
             Dictionary<int, string> simpleDictionary = new Dictionary<int, string>();
+
             simpleDictionary.Add(1, "eka");
             simpleDictionary.Add(2, "den andra");
             simpleDictionary.Add(3, "the third");
 
-            Console.WriteLine(simpleDictionary.Values);
+            //Console.WriteLine(simpleDictionary.Values);
 
-            //simpleDictionary.Add(3, "the third");
-            //simpleDictionary[2] = "toinen";
+            simpleDictionary.Add(4, "nelijä");
+            simpleDictionary[2] = "toinen";
+
+            foreach(KeyValuePair<int, string> kvp in simpleDictionary)
+            {
+                Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
+            }
 
 
 
@@ -31,6 +37,21 @@ namespace AW_FullStack_W2_D1_Dictionary
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
             Console.WriteLine(Environment.NewLine);
             
             Dictionary<int, Car> cDictionary = new Dictionary<int, Car>();
@@ -41,11 +62,15 @@ namespace AW_FullStack_W2_D1_Dictionary
             cDictionary.Add(1, fiat);
 
             Car haettu = null;
+
             cDictionary.TryGetValue(1, out haettu);
 
             haettu.Year = 1994;
 
             Console.WriteLine(cDictionary[1].Year);
+
+            Console.WriteLine(fiat.Year);
+
         }
     }
 
