@@ -30,12 +30,22 @@ namespace AW_FullStack_W2_D1_Dictionary
             }
 
 
-            //Dictionary<int, Car> cDictionary = new Dictionary<int, Car>();
-            //Car fiat = new Car("Fiat", "Punto", 2004);
 
-            //cDictionary.Add(1, fiat);
+            Console.WriteLine(Environment.NewLine);
+            
+            Dictionary<int, Car> cDictionary = new Dictionary<int, Car>();
+            Car fiat = new Car("Fiat", "Punto", 2004);
 
+            Console.WriteLine(fiat.Year);
 
+            cDictionary.Add(1, fiat);
+
+            Car haettu = null;
+            cDictionary.TryGetValue(1, out haettu);
+
+            haettu.Year = 1994;
+
+            Console.WriteLine(cDictionary[1].Year);
         }
     }
 

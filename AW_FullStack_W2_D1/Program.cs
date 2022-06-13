@@ -34,7 +34,18 @@ namespace AW_FullStack_W2_D1
             {
                 Console.WriteLine(c.Make + " " + c.Model + " " + c.Year);
             }
-            
+
+
+            Console.WriteLine(Environment.NewLine);
+
+            /*Car haettu = cList.Find(c => c.Make == "Nissan");
+
+            haettu.Model = "Silvia";
+
+            foreach (Car c in cList)
+            {
+                Console.WriteLine(c.Make + " " + c.Model + " " + c.Year);
+            }*/
         }
     }
 
